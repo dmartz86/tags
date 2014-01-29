@@ -5,18 +5,29 @@
  * Documentation found here: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list
  */
 tagsModApp.controller('TagsC', function TagsC($scope, $http) {
-
-	//restricted restricted
+	$scope.addElement = function (name,desc,elements,attributes){
+		return {
+			name: name,
+			desc: desc,
+			elements: elements,
+			attributes: attributes
+		}
+	};
+	
+	/**
+	 * Restrictions:
+	 * html: one node container of others
+	 * body: restriction to only one into html
+	 */
 	var elements = { 
 		root :'html',
 		metadata: {
-			name: 'head',
-			desc: '',
+			head: 'head',
 			elements: {
-				tittle:'tittle', 
-				base: 'base', 
-				link: 'link', 
-				meta: 'meta', 
+				tittle:'tittle',
+				base: 'base',
+				link: 'link',
+				meta: 'meta',
 				style: 'style'
 			}
 		},
@@ -118,10 +129,27 @@ tagsModApp.controller('TagsC', function TagsC($scope, $http) {
 			th: 'th'
 		},
 		forms:{
-			
+			form: 'form',
+			fieldset: 'fieldset',
+			legend: 'legend',
+			label: 'label',
+			input: 'input',
+			button: 'button',
+			select: 'select',
+			datalist: 'datalist',
+			optgroup: 'optgroup',
+			option: 'option',
+			textarea: 'textarea',
+			keygen: 'keygen',
+			ouput: 'ouput',
+			progress: 'progress',
+			meter: 'meter'
 		},
 		interactive:{
-			
+			details: 'details',
+			summnary:  'summnary',
+			menuitem: 'menuitem',
+			menu: 'menu'
 		}
 	};
 });
