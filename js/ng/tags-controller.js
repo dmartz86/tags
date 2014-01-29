@@ -90,10 +90,32 @@ tagsModApp.controller('TagsC', function TagsC($scope, $http) {
 			del: 'del'
 		},
 		embedded:{
-			
+			img: 'img',
+			iframe: 'iframe',
+			embed: 'embed',
+			object: 'object',
+			param: 'param',
+			video: 'video',
+			audio: 'audio',
+			source: 'source',
+			track: 'track',
+			canvas: 'canvas',
+			map: 'map',
+			area: 'area',
+			svg: 'svg',
+			math: 'math'
 		},
 		tabular:{
-			
+			table: 'table',
+			caption: 'caption',
+			colgroup: 'colgroup',
+			col: 'col',
+			tbody: 'tbody',
+			thead: 'thead',
+			tfoot: 'tfoot',
+			tr: 'tr',
+			td: 'td',
+			th: 'th'
 		},
 		forms:{
 			
